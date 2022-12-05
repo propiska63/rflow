@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rflow *.css
+recursive-include rflow *.csv
+recursive-include rflow *.html
+recursive-include rflow *.ico
+recursive-include rflow *.js
+recursive-include rflow *.json
+recursive-include rflow *.md
+recursive-include rflow *.png
+recursive-include rflow *.py
+recursive-include rflow *.svg
+recursive-include rflow *.txt
+recursive-exclude rflow *.pyc
