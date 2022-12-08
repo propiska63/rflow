@@ -1,0 +1,21 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "RentDeals History",
+   "width": "Full"
+  }
+ ],
+ "creation": "2022-11-26 16:16:18.335363",
+ "dashboard_name": "RentDeals Analytics",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2022-12-06 17:32:29.280021",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "RentDeals Analytics",
+ "owner": "Administrator"
+}
