@@ -13,7 +13,7 @@
    "label": "Distribution by Tax"
   }
  ],
- "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Accepted\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Without Deal\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Orders History\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Tax\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Clients\",\"col\":6}}]",
+ "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Transferred\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Without Deal\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Orders History\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Tax\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Clients\",\"col\":6}}]",
  "creation": "2022-11-26 14:13:13.813264",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -23,7 +23,7 @@
  "idx": 0,
  "label": "LETTERS",
  "links": [],
- "modified": "2022-12-06 16:56:54.597390",
+ "modified": "2022-12-08 14:25:23.092137",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "LETTERS",
@@ -33,7 +33,7 @@
  "quick_lists": [
   {
    "document_type": "RieltFlow",
-   "label": "Accepted",
+   "label": "Transferred",
    "quick_list_filter": "{\"docstatus\":[\"=\",\"1\"],\"inn\":[\"is\",\"not set\"]}"
   },
   {
