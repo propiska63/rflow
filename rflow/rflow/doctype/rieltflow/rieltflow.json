@@ -1,0 +1,309 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-07 15:45:45.704219",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "order_information_tab",
+  "date",
+  "column_break_3",
+  "agent",
+  "section_break_3",
+  "week",
+  "tax_area",
+  "column_break_5",
+  "address",
+  "section_break_8",
+  "director",
+  "revenue",
+  "column_break_10",
+  "company",
+  "company_type",
+  "section_break_9",
+  "type",
+  "column_break_12",
+  "period",
+  "result_of_order_tab",
+  "inn",
+  "inaccuracy",
+  "column_break_24",
+  "registration_date",
+  "update_from_egrul",
+  "section_break_21",
+  "exp_month",
+  "deal_name",
+  "column_break_25",
+  "exp_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Order information"
+  },
+  {
+   "default": "Today",
+   "fetch_if_empty": 1,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "columns": 10,
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Address",
+   "options": "CheckerBoard",
+   "width": "100"
+  },
+  {
+   "fieldname": "revenue",
+   "fieldtype": "Int",
+   "label": "Revenue",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "columns": 2,
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Company"
+  },
+  {
+   "default": "primary",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Rent Type",
+   "options": "primary\nremoval"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Agent",
+   "options": "Contact",
+   "remember_last_selected_value": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "director",
+   "fieldtype": "Data",
+   "label": "Director"
+  },
+  {
+   "fieldname": "result_of_order_tab",
+   "fieldtype": "Tab Break",
+   "label": "Result of Order"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inn",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "INN",
+   "no_copy": 1,
+   "non_negative": 1,
+   "unique": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "3",
+   "fieldname": "period",
+   "fieldtype": "Int",
+   "hide_seconds": 1,
+   "label": "Rent Period"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "deal_name",
+   "fieldtype": "Data",
+   "label": "Deal Name",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exp_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "label": "Exp Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "week",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_filter": 1,
+   "label": "Week"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "\u041e\u041e\u041e - \u0413\u0435\u043d\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440",
+   "fieldname": "company_type",
+   "fieldtype": "Link",
+   "label": "Company Type",
+   "options": "CompanyTypes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RieltFlow",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "inaccuracy",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Inaccuracy in EGRUL"
+  },
+  {
+   "fieldname": "update_from_egrul",
+   "fieldtype": "Button",
+   "label": "Update from EGRUL"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "exp_month",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Exp Month",
+   "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "tax_area",
+   "fieldtype": "Link",
+   "label": "Tax Area",
+   "options": "TaxArea"
+  }
+ ],
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "RentDeal",
+   "link_fieldname": "guarantee_letter",
+   "table_fieldname": "name"
+  }
+ ],
+ "max_attachments": 2,
+ "modified": "2022-12-06 12:06:24.682331",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "RieltFlow",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "company, address",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

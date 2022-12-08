@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "creation": "2022-11-03 13:44:02.476864",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deal_information_tab",
+  "guarantee_letter",
+  "contact",
+  "guarantee",
+  "individual",
+  "pay_first",
+  "column_break_3",
+  "date",
+  "address",
+  "section_break_5",
+  "price",
+  "rent_period",
+  "column_break_12",
+  "pledge",
+  "exp_date",
+  "exp_month",
+  "amended_from",
+  "tenant_information_tab",
+  "company",
+  "company_type",
+  "director",
+  "registration",
+  "column_break_11",
+  "passport",
+  "issued_by",
+  "when_iissued",
+  "inn",
+  "ogrn",
+  "kpp",
+  "section_break_15",
+  "bank",
+  "account",
+  "column_break_18",
+  "bik",
+  "cor_account",
+  "deal_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "deal_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Deal Information"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "guarantee",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "By guarantee letter"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "guarantee_letter",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Guarantee Letter",
+   "options": "RieltFlow"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RentDeal",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "company_type",
+   "fieldtype": "Link",
+   "label": "Company Type",
+   "options": "CompanyTypes"
+  },
+  {
+   "fieldname": "director",
+   "fieldtype": "Data",
+   "label": "Director"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inn",
+   "fieldtype": "Data",
+   "label": "INN"
+  },
+  {
+   "fieldname": "ogrn",
+   "fieldtype": "Data",
+   "label": "OGRN"
+  },
+  {
+   "fieldname": "kpp",
+   "fieldtype": "Data",
+   "label": "KPP"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Data",
+   "label": "Account"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bik",
+   "fieldtype": "Data",
+   "label": "BIK"
+  },
+  {
+   "fieldname": "cor_account",
+   "fieldtype": "Data",
+   "label": "Cor Account"
+  },
+  {
+   "fieldname": "tenant_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tenant Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "individual",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "label": "Tenant - individual"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "CheckerBoard",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Int",
+   "label": "Price per Month",
+   "reqd": 1
+  },
+  {
+   "default": "100%",
+   "fieldname": "pledge",
+   "fieldtype": "Select",
+   "label": "Pledge",
+   "options": "0%\n100%\n50/50"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "11",
+   "fieldname": "rent_period",
+   "fieldtype": "Int",
+   "label": "Rent Period (Months)",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "pay_first",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Payment from 1st"
+  },
+  {
+   "fieldname": "exp_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Exp Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration",
+   "fieldtype": "Data",
+   "label": "Registration"
+  },
+  {
+   "fieldname": "passport",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Passport"
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Issued By"
+  },
+  {
+   "fieldname": "when_iissued",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "When Iissued"
+  },
+  {
+   "fieldname": "exp_month",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Exp Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deal_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Deal Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-06 09:54:35.570560",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "RentDeal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "guarantee_letter, contact, address, company, director",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

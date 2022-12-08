@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-10 19:43:36.503446",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mandatory_information_tab",
+  "address",
+  "warehouse",
+  "in_use",
+  "column_break_4",
+  "contact",
+  "our_company",
+  "section_break_7",
+  "deal_date",
+  "registry",
+  "column_break_8",
+  "tax_code",
+  "square",
+  "amended_from",
+  "deal_information_tab",
+  "deal_period",
+  "owner_percentage",
+  "prefix",
+  "column_break_13",
+  "dealer",
+  "commission_type",
+  "payment_amount",
+  "section_break_16",
+  "exp_date",
+  "taxarea",
+  "column_break_21",
+  "exp_month",
+  "default_price",
+  "full_address",
+  "stakeholders_tab",
+  "executor_phone",
+  "column_break_29",
+  "executor_name",
+  "section_break_31",
+  "owner_registration",
+  "owner_passport",
+  "column_break_34",
+  "issued_by",
+  "when_iissued"
+ ],
+ "fields": [
+  {
+   "fieldname": "mandatory_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Mandatory Information"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registry",
+   "fieldtype": "Data",
+   "label": "Registry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Owner",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_code",
+   "fieldtype": "Link",
+   "label": "Tax Code",
+   "options": "TaxCode",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "1",
+   "fieldname": "in_use",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "In use"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deal_information_tab",
+   "fieldtype": "Tab Break",
+   "label": "Deal Information"
+  },
+  {
+   "fieldname": "deal_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Deal Date",
+   "reqd": 1
+  },
+  {
+   "default": "11",
+   "fieldname": "deal_period",
+   "fieldtype": "Int",
+   "label": "Deal Period"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "50",
+   "fieldname": "owner_percentage",
+   "fieldtype": "Int",
+   "label": "Owner Percentage",
+   "length": 2,
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "exp_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Exp Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exp_month",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Exp Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OwnerDeal",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prefix",
+   "fieldtype": "Data",
+   "label": "Prefix for Deals"
+  },
+  {
+   "fieldname": "taxarea",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tax Area",
+   "options": "TaxArea",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_address",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Full Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "our_company",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Our Company",
+   "options": "OurCompany",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dealer",
+   "fieldtype": "Link",
+   "label": "Dealer",
+   "options": "Contact"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "One-time payment",
+   "fieldname": "commission_type",
+   "fieldtype": "Select",
+   "label": "Commission Type",
+   "options": "One-time payment\nFrom every transaction"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount",
+   "non_negative": 1,
+   "precision": "0"
+  },
+  {
+   "fieldname": "stakeholders_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stakeholders"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "executor_phone",
+   "fieldtype": "Data",
+   "label": "Executor Phone"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "executor_name",
+   "fieldtype": "Data",
+   "label": "Executor Name"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "owner_registration",
+   "fieldtype": "Data",
+   "label": "Owner Registration"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "owner_passport",
+   "fieldtype": "Data",
+   "label": "Owner Passport"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "when_iissued",
+   "fieldtype": "Date",
+   "label": "When Iissued"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "issued_by",
+   "fieldtype": "Data",
+   "label": "Issued By"
+  },
+  {
+   "fieldname": "default_price",
+   "fieldtype": "Int",
+   "label": "Default Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "warehouse",
+   "fieldtype": "Check",
+   "label": "Warehouse Rent"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "square",
+   "fieldtype": "Int",
+   "label": "Square",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "CheckerBoard",
+   "link_fieldname": "address"
+  }
+ ],
+ "modified": "2022-12-06 10:13:50.210312",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "OwnerDeal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "taxarea, full_address",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
