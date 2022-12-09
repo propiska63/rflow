@@ -5,7 +5,7 @@
    "label": "Deals History"
   }
  ],
- "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Actual\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"For Renewal\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Deals History\",\"col\":12}}]",
+ "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Current\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"For Renewal\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Deals History\",\"col\":12}}]",
  "creation": "2022-11-26 18:31:22.111810",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -15,7 +15,7 @@
  "idx": 0,
  "label": "FUND",
  "links": [],
- "modified": "2022-12-06 16:56:54.895722",
+ "modified": "2022-12-09 06:33:03.868373",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "FUND",
@@ -25,7 +25,7 @@
  "quick_lists": [
   {
    "document_type": "OwnerDeal",
-   "label": "Actual",
+   "label": "Current",
    "quick_list_filter": "{\"docstatus\":[\"=\",\"1\"]}"
   },
   {
