@@ -107,7 +107,10 @@ frappe.ui.form.on('RentDeal', {
 						company: linked_doc.company,
 						company_type: linked_doc.company_type,
 						director: linked_doc.director,
-						inn: linked_doc.inn
+						inn: linked_doc.inn,
+						ogrn: linked_doc.ogrn,
+						kpp: linked_doc.kpp,
+						pledge: '0%'
 					})
 
         			}
