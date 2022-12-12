@@ -12,6 +12,7 @@ frappe.ui.form.on('RentDeal', {
 		frm.toggle_enable(['contact','individual','pay_first','address','date'],
 			guarantee === 0);
 
+
 		if (guarantee === 1) {
 			frm.set_df_property('date', 'label', __('Registration Date'))
 		}
@@ -32,7 +33,8 @@ frappe.ui.form.on('RentDeal', {
 		frm.toggle_display([
 			'company_type','director','inn','ogrn','kpp','bank','account','bik','cor_account'],
 			individual === 0);
-
+		frm.toggle_reqd(['company_type','director',],
+			individual === 0);
 		frm.set_query('guarantee_letter', () => {
 			return {
 			filters: {
@@ -131,7 +133,8 @@ frappe.ui.form.on('RentDeal', {
 		frm.toggle_display([
 			'company_type','director','inn','ogrn','kpp','bank','account','bik','cor_account'],
 			individual === 0);
-
+		frm.toggle_reqd(['company_type','director',],
+			individual === 0);
 		if (individual === 1) {
 			frm.set_df_property('company', 'label', __('Tenant Name'));
 			frm.set_value({
