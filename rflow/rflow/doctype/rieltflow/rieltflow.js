@@ -16,7 +16,7 @@ frappe.ui.form.on('RieltFlow', {
 		frm.set_query('agent', () => {
 			return {
 			filters: {
-				status: __('Open')
+				status: 'Open'
 				}
 			}
 		})

@@ -10,7 +10,7 @@ frappe.ui.form.on('OurCompany', {
 			return {
 			filters: {
 			disabled: 0,
-			address_type: __('Office')
+			address_type: 'Office'
 			}
 			}
 		})

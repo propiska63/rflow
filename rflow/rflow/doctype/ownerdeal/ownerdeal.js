@@ -10,7 +10,7 @@ frappe.ui.form.on('OwnerDeal', {
 			return {
 			filters: {
 			disabled: 0,
-			address_type: __('Current')
+			address_type: 'Current'
 			}
 			}
 		})
