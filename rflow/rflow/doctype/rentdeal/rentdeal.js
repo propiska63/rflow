@@ -104,7 +104,10 @@ frappe.ui.form.on('RentDeal', {
 						address: linked_doc.address,
 						contact: linked_doc.agent,
 						price: linked_doc.revenue / linked_doc.period,
-						company: linked_doc.company
+						company: linked_doc.company,
+						company_type: linked_doc.company_type,
+						director: linked_doc.director,
+						inn: linked_doc.inn
 					})
 
         			}

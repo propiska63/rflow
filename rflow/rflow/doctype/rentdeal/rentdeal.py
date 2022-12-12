@@ -34,17 +34,21 @@ class RentDeal(Document):
 		year = datetime.date.today().year
 		ownerdeal, office, place = frappe.db.get_value('CheckerBoard', self.address, ['address', 'office', 'place'])
 		prefix, address = frappe.db.get_value('OwnerDeal', ownerdeal, ['prefix', 'address'])
-		possession = frappe.db.get_value('Address', address, 'address_line2') or '00'
+		possession = frappe.db.get_value('Address', address, 'address_line1') or '00'
 		if office:
 			if place:
 				object = cstr(f'{office}.{place}')
 			else:
 				object = cstr(office)
-			self.deal_name = cstr(f'{possession}-{object}/{prefix}-{datetime.date.today().year}')
-			self.name = f'{self.deal_name} {self.company}'
+			#self.deal_name = cstr(f'{possession}-{object}/{prefix}-{getdate(self.date).year}')
+			self.deal_name = cstr(f'{possession}-{object}/{prefix}')
+
+			#self.name = f'{self.company} {self.deal_name} {self.date}'
 		else:
-			self.deal_name = cstr(f'{possession}/{prefix}-{datetime.date.today().year}')
-			self.name = f'{self.deal_name} {self.company}'
+			#self.deal_name = cstr(f'{possession}/{prefix}-{datetime.date.today().year}')
+			self.deal_name = cstr(f'{possession}/{prefix}')
+
+		self.name = f'{self.company} {self.deal_name} {self.date}'
 
 	def before_save(self):
 		# Set exp_date

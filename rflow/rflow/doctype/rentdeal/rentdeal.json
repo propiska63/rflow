@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "creation": "2022-11-03 13:44:02.476864",
  "default_view": "List",
@@ -264,17 +265,18 @@
    "read_only": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-06 09:54:35.570560",
+ "modified": "2022-12-12 17:19:59.100389",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RentDeal",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -284,13 +286,15 @@
    "report": 1,
    "role": "System Manager",
    "select": 1,
+   "set_user_permissions": 1,
    "share": 1,
    "submit": 1,
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
