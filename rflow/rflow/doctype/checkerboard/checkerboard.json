@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-11-06 15:56:48.144686",
@@ -51,7 +52,6 @@
   },
   {
    "allow_in_quick_entry": 1,
-   "default": "7000",
    "fieldname": "price",
    "fieldtype": "Int",
    "label": "Price",
@@ -114,7 +114,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-12 17:15:22.977169",
+ "modified": "2022-12-12 22:13:57.119186",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CheckerBoard",
@@ -153,7 +153,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
