@@ -34,7 +34,7 @@ class RentDeal(Document):
 		year = datetime.date.today().year
 		ownerdeal, office, place = frappe.db.get_value('CheckerBoard', self.address, ['address', 'office', 'place'])
 		prefix, address = frappe.db.get_value('OwnerDeal', ownerdeal, ['prefix', 'address'])
-		possession = frappe.db.get_value('Address', address, 'address_line1') or '00'
+		possession = frappe.db.get_value('Address', address, 'address_line1').split(' ')[1] or '00'
 		if office:
 			if place:
 				object = cstr(f'{office}.{place}')

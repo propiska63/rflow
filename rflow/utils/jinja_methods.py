@@ -24,8 +24,8 @@ def money_text(money):
 
 def get_address(address):
     adr = list(frappe.db.get_value(
-			'Address', address, ['pincode', 'city', 'address_line1',
-			'address_line2']))
+			'Address', address, ['pincode', 'city', 'address_line2',
+			'address_line1']))
     return ', '.join(filter(None, adr))
 
 def short_fio(contact):
@@ -76,18 +76,18 @@ def morph_date(date, full=False):
 
 def morph_fio(fullname):
     fio = []
-    full_fio = fullname.strip().split(' ')
+    fio = fullname.strip().split(' ')
     p = Petrovich()
     try:
-        fio.append(p.lastname(full_fio[0], Case.GENITIVE))
+        fio[0] = (p.lastname(fio[0], Case.GENITIVE))
     except:
         pass
     try:
-        fio.append(p.firstname(full_fio[1], Case.GENITIVE))
+        fio[1] = (p.firstname(fio[1], Case.GENITIVE))
     except:
         pass
     try:
-        fio.append(p.lastname(full_fio[2], Case.GENITIVE))
+        fio[2] = (p.lastname(fio[2], Case.GENITIVE))
     except:
         pass
     return ' '.join(fio)
