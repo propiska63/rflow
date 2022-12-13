@@ -27,12 +27,16 @@ class CheckerBoard(Document):
 			ORDER BY checker.place DESC
 			LIMIT 1
 			""", values=values, as_dict=1)
-		if int(data[0]['place']) > 2:
-			self.office = int(data[0]['office']) + 1
+		try:
+			if int(data[0]['place']) > 2:
+				self.office = int(data[0]['office']) + 1
+				self.place = 1
+			else:
+				self.office = int(data[0]['office'])
+				self.place = int(data[0]['place']) + 1
+		except IndexError:
+			self.office = 1
 			self.place = 1
-		else:
-			self.office = int(data[0]['office'])
-			self.place = int(data[0]['place']) + 1
 		self.price = doc.default_price
 		return self
 

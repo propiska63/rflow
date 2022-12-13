@@ -281,6 +281,7 @@
    "label": "Issued By"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "default_price",
    "fieldtype": "Int",
    "label": "Default Price"
@@ -310,7 +311,7 @@
    "link_fieldname": "address"
   }
  ],
- "modified": "2022-12-12 18:00:53.952632",
+ "modified": "2022-12-13 18:17:16.690954",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OwnerDeal",
