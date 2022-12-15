@@ -22,8 +22,9 @@ class RieltFlow(Document):
 		return frappe.get_doc('CheckerBoard', self.address)
 	# Compose unique name
 	def autoname(self):
-		self.name = cstr(f'{self.agent} {getseries(self.agent, 4)} {self.address}')
-
+		self.name = cstr(f'{self.company} | {self.address}')
+		if frappe.db.exists("RieltFlow", self.name):
+			self.name = cstr(f'{self.name} #{getseries(self.name, 1)}')
 	def before_save(self):
 		# Set week of record
 		weekday = getdate(self.date).weekday()
@@ -36,8 +37,8 @@ class RieltFlow(Document):
 			self.exp_date = add_to_date(self.registration_date, months=self.period)
 			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
-			self.exp_date = ''
-			self.exp_month = ''
+			self.exp_date = None
+			self.exp_month = None
 
 		if len(self.director.strip().split(' ')) < 3:
 				throw(_('Please enter full director FIO'))
@@ -51,7 +52,7 @@ class RieltFlow(Document):
 			return
 		else:
 			if old.address != self.address and old.address:
-				frappe.db.set_value('CheckerBoard', old.address, 'rielt_flow', '')
+				frappe.db.set_value('CheckerBoard', old.address, 'rielt_flow', None)
 
 
 	def on_update_after_submit(self):
@@ -59,9 +60,9 @@ class RieltFlow(Document):
 			self.exp_date = add_to_date(self.registration_date, months=self.period)
 			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
-			self.exp_date = ''
-			self.exp_month = ''
+			self.exp_date = None
+			self.exp_month = None
 
 	def on_trash(self):
 		if self.address and not self.deal_name:
-			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', '')
+			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', None)
