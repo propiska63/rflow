@@ -72,6 +72,7 @@
    "in_standard_filter": 1,
    "label": "Address",
    "options": "CheckerBoard",
+   "reqd": 1,
    "width": "100"
   },
   {
@@ -79,7 +80,8 @@
    "fieldtype": "Int",
    "label": "Revenue",
    "non_negative": 1,
-   "precision": "0"
+   "precision": "0",
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -91,14 +93,16 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Company"
+   "label": "Company",
+   "reqd": 1
   },
   {
    "default": "primary",
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Rent Type",
-   "options": "primary\nremoval"
+   "options": "primary\nremoval",
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -118,7 +122,8 @@
    "allow_in_quick_entry": 1,
    "fieldname": "director",
    "fieldtype": "Data",
-   "label": "Director"
+   "label": "Director",
+   "reqd": 1
   },
   {
    "fieldname": "result_of_order_tab",
@@ -158,7 +163,8 @@
    "fieldname": "period",
    "fieldtype": "Int",
    "hide_seconds": 1,
-   "label": "Rent Period"
+   "label": "Rent Period",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_8",
@@ -208,7 +214,8 @@
    "fieldname": "company_type",
    "fieldtype": "Link",
    "label": "Company Type",
-   "options": "CompanyTypes"
+   "options": "CompanyTypes",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -257,7 +264,8 @@
    "fieldname": "tax_area",
    "fieldtype": "Link",
    "label": "Tax Area",
-   "options": "TaxArea"
+   "options": "TaxArea",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -286,7 +294,7 @@
   }
  ],
  "max_attachments": 2,
- "modified": "2022-12-12 19:59:43.701088",
+ "modified": "2022-12-14 15:36:14.868528",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RieltFlow",
