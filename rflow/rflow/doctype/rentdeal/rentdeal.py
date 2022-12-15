@@ -56,36 +56,46 @@ class RentDeal(Document):
 			self.exp_date = add_to_date(self.date, months=self.rent_period)
 			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
-			self.exp_date = ''
-			self.exp_month = ''
-
+			self.exp_date = None
+			self.exp_month = None
+	
+	def before_submit(self):
+		if not frappe.db.exists('CheckerBoard', self.address):
+				throw(_('Error - Linked address not found'))
+		checker = frappe.get_doc('CheckerBoard', self.address)
+		if checker.docstatus == 0:
+			checker._submit()
+		if not frappe.db.exists('RieltFlow', self.guarantee_letter):
+			throw(_('Error - Linked guarantee letter not found'))
+		rflow = frappe.get_doc('RieltFlow', self.guarantee_letter)
+		if rflow.docstatus == 0:
+			rflow._submit()
+	
 	def on_update(self):
 		# Set CheckerBoard link for filters
 		if self.address:
 			frappe.db.set_value('CheckerBoard', self.address, 'rent_deal', self.name)
 		if self.guarantee_letter:
 			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'deal_name', self.name)
-			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'docstatus', 1)
-
-
+			#frappe.db.set_value('RieltFlow', self.guarantee_letter, 'docstatus', 1)
 		old = self.get_doc_before_save()
 		if not old:
 			return
 
 		if old.address != self.address and old.address:
-			frappe.db.set_value('CheckerBoard', old.address, 'rent_deal', '')
+			frappe.db.set_value('CheckerBoard', old.address, 'rent_deal', None)
 
 		if old.guarantee_letter != self.guarantee_letter and old.guarantee_letter:
-			frappe.db.set_value('RieltFlow', old.guarantee_letter, 'deal_name', '')
+			frappe.db.set_value('RieltFlow', old.guarantee_letter, 'deal_name', None)
 
 	def on_trash(self):
 		if self.address:
 			frappe.db.set_value('CheckerBoard', self.address, 'rent_deal', '')
 		if self.guarantee:
-			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'deal_name', '')
+			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'deal_name', None)
 
 	def before_cancel(self):
 		if self.address:
-			frappe.db.set_value('CheckerBoard', self.address, 'rent_deal', '')
+			frappe.db.set_value('CheckerBoard', self.address, 'rent_deal', None)
 		if self.guarantee:
-			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'deal_name', '')
+			frappe.db.set_value('RieltFlow', self.guarantee_letter, 'deal_name', None)
