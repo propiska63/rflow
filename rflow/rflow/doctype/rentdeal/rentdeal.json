@@ -265,10 +265,11 @@
    "read_only": 1
   }
  ],
+ "force_re_route_to_default_view": 1,
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-12 20:04:39.816838",
+ "modified": "2022-12-15 20:47:48.672804",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RentDeal",
@@ -295,6 +296,7 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -307,7 +309,7 @@
    "write": 1
   }
  ],
- "search_fields": "guarantee_letter, contact, address, company, director",
+ "search_fields": "contact, address, company, director",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
