@@ -3,6 +3,7 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-10-10 19:43:36.503446",
+ "default_view": "List",
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
@@ -303,6 +304,7 @@
    "reqd": 1
   }
  ],
+ "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [
@@ -311,7 +313,7 @@
    "link_fieldname": "address"
   }
  ],
- "modified": "2022-12-13 18:17:16.690954",
+ "modified": "2022-12-15 20:49:43.664926",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OwnerDeal",
@@ -338,6 +340,7 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -350,7 +353,7 @@
    "write": 1
   }
  ],
- "search_fields": "taxarea, full_address",
+ "search_fields": "taxarea",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

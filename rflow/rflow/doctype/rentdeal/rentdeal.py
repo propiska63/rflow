@@ -9,7 +9,22 @@ from frappe.utils import getdate
 from frappe.utils import get_abbr
 from frappe.utils import cstr
 import datetime
-import rflow.utils.morph as morph
+
+def russian_month(date):
+    month = {'January': 'Январь',
+            'February': 'Февраль',
+            'March': 'Март',
+            'April': 'Апрель',
+            'May': 'Май',
+            'June': 'Июнь',
+            'July': 'Июль',
+            'August': 'Август',
+            'September': 'Сентябрь',
+            'October': 'октября',
+            'Октябрь': 'Октябрь',
+            'November': 'Ноябрь',
+            'December': 'Декабрь'}
+    return month[date]
 
 class RentDeal(Document):
 
@@ -54,7 +69,7 @@ class RentDeal(Document):
 		# Set exp_date
 		if self.date and self.rent_period:
 			self.exp_date = add_to_date(self.date, months=self.rent_period)
-			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
 			self.exp_date = None
 			self.exp_month = None

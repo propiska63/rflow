@@ -3,6 +3,7 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-10-09 22:02:31.318785",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -33,8 +34,9 @@
    "reqd": 1
   }
  ],
+ "force_re_route_to_default_view": 1,
  "links": [],
- "modified": "2022-12-12 17:26:33.566385",
+ "modified": "2022-12-15 20:55:38.806118",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CompanyTypes",

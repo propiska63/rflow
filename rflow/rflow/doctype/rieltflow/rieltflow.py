@@ -8,8 +8,22 @@ from frappe.model.naming import getseries
 from frappe.utils import getdate
 from frappe.utils import add_to_date
 from frappe import _, throw
-import datetime
-import rflow.utils.morph as morph
+
+def russian_month(date):
+    month = {'January': 'Январь',
+            'February': 'Февраль',
+            'March': 'Март',
+            'April': 'Апрель',
+            'May': 'Май',
+            'June': 'Июнь',
+            'July': 'Июль',
+            'August': 'Август',
+            'September': 'Сентябрь',
+            'October': 'октября',
+            'Октябрь': 'Октябрь',
+            'November': 'Ноябрь',
+            'December': 'Декабрь'}
+    return month[date]
 
 class RieltFlow(Document):
 
@@ -35,7 +49,7 @@ class RieltFlow(Document):
 		# Set exp_date
 		if self.registration_date:
 			self.exp_date = add_to_date(self.registration_date, months=self.period)
-			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
 			self.exp_date = None
 			self.exp_month = None
@@ -63,7 +77,7 @@ class RieltFlow(Document):
 	def on_update_after_submit(self):
 		if self.registration_date:
 			self.exp_date = add_to_date(self.registration_date, months=self.period)
-			self.exp_month = f'{morph.russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
 			self.exp_date = None
 			self.exp_month = None

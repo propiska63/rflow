@@ -3,6 +3,7 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-10-10 21:22:10.281683",
+ "default_view": "List",
  "doctype": "DocType",
  "document_type": "Setup",
  "editable_grid": 1,
@@ -30,9 +31,10 @@
    "reqd": 1
   }
  ],
+ "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-12 18:03:16.197308",
+ "modified": "2022-12-15 20:52:31.228758",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "TaxArea",
@@ -54,6 +56,7 @@
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

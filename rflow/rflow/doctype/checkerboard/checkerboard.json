@@ -3,6 +3,7 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-11-06 15:56:48.144686",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -111,10 +112,11 @@
    "read_only": 1
   }
  ],
+ "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-12 22:13:57.119186",
+ "modified": "2022-12-15 20:51:01.371188",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CheckerBoard",
@@ -141,6 +143,7 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -153,6 +156,7 @@
    "write": 1
   }
  ],
+ "search_fields": "taxarea",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
