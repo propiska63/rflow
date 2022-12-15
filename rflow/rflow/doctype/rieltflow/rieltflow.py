@@ -42,7 +42,12 @@ class RieltFlow(Document):
 
 		if len(self.director.strip().split(' ')) < 3:
 				throw(_('Please enter full director FIO'))
-
+	def before_submit(self):
+		if not frappe.db.exists('CheckerBoard', self.address):
+				throw(_('Error - Linked address not found'))
+		checker = frappe.get_doc('CheckerBoard', self.address)
+		if checker.docstatus == 0:
+			checker._submit()
 	def on_update(self):
 		# Set CheckerBoard link for filters
 		if self.address:

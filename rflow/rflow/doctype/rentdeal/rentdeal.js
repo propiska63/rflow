@@ -45,7 +45,6 @@ frappe.ui.form.on('RentDeal', {
 		frm.set_query('address', () => {
 			return {
 			filters: {
-			docstatus: 1,
 			rent_deal: '',
 			rielt_flow: ''
 			}
