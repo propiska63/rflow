@@ -87,7 +87,7 @@ def morph_fio(fullname):
     except:
         pass
     try:
-        fio[2] = (p.lastname(fio[2], Case.GENITIVE))
+        fio[2] = (p.middlename(fio[2], Case.GENITIVE))
     except:
         pass
     return ' '.join(fio)
@@ -105,7 +105,7 @@ def morph_contact_fio(contact):
     except:
         pass
     try:
-        fio.append(p.lastname(cont.middle_name, Case.GENITIVE))
+        fio.append(p.middlename(cont.middle_name, Case.GENITIVE))
     except:
         pass
     return ' '.join(fio)
