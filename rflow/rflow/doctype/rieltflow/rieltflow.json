@@ -111,6 +111,7 @@
    "fieldtype": "Link",
    "in_filter": 1,
    "in_global_search": 1,
+   "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Agent",
@@ -257,6 +258,7 @@
    "fieldtype": "Data",
    "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Exp Month",
    "read_only": 1
   },
@@ -296,7 +298,7 @@
   }
  ],
  "max_attachments": 2,
- "modified": "2022-12-15 20:43:28.931300",
+ "modified": "2022-12-16 20:41:10.228818",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RieltFlow",
