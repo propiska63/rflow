@@ -1,9 +1,10 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2022-10-07 15:45:45.704219",
  "default_view": "List",
+ "description": "\u041e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u0435 \u0433\u0430\u0440\u0430\u043d\u0442\u0438\u0439\u043d\u044b\u0445 \u043f\u0438\u0441\u0435\u043c",
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
@@ -41,7 +42,8 @@
   "deal_name",
   "column_break_25",
   "exp_date",
-  "amended_from"
+  "amended_from",
+  "workflow"
  ],
  "fields": [
   {
@@ -285,6 +287,17 @@
    "in_filter": 1,
    "in_global_search": 1,
    "label": "KPP"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "\u041d\u043e\u0432\u043e\u0435",
+   "fieldname": "workflow",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Workflow",
+   "options": "\u041d\u043e\u0432\u043e\u0435\n\u041f\u0435\u0440\u0435\u0434\u0430\u043d\u043e\n\u041e\u043f\u043b\u0430\u0447\u0435\u043d\u043e\n\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u043e\n\u041d\u0430 \u0444\u043e\u0440\u043c\u0443\n\u0421\u043d\u044f\u0442\u043e"
   }
  ],
  "force_re_route_to_default_view": 1,
@@ -298,7 +311,7 @@
   }
  ],
  "max_attachments": 2,
- "modified": "2022-12-16 20:41:10.228818",
+ "modified": "2022-12-17 14:06:25.294375",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RieltFlow",
@@ -311,6 +324,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -343,5 +357,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1
 }

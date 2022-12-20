@@ -1,9 +1,10 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2022-10-10 19:43:36.503446",
  "default_view": "List",
+ "description": "\u0414\u043e\u0433\u043e\u0432\u043e\u0440\u0430 \u0441 \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u0438\u043a\u0430\u043c\u0438 \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u0439",
  "doctype": "DocType",
  "document_type": "Document",
  "editable_grid": 1,
@@ -313,7 +314,7 @@
    "link_fieldname": "address"
   }
  ],
- "modified": "2022-12-15 20:49:43.664926",
+ "modified": "2022-12-17 14:26:23.672644",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OwnerDeal",
@@ -326,6 +327,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
