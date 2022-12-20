@@ -26,6 +26,10 @@ def get_address(address):
     adr = list(frappe.db.get_value(
 			'Address', address, ['pincode', 'city', 'address_line2',
 			'address_line1']))
+    try:
+        adr[2] = adr[2].replace(' ','&nbsp')
+    except:
+        pass
     return ', '.join(filter(None, adr))
 
 def short_fio(contact):

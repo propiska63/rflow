@@ -1,10 +1,11 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_rename": 1,
  "creation": "2022-10-10 21:20:05.183023",
  "default_view": "List",
+ "description": "\u0414\u0430\u043d\u043d\u044b\u0435 \u043d\u0430\u043b\u043e\u0433\u043e\u0432\u044b\u0445 \u0438\u043d\u0441\u043f\u0435\u043a\u0446\u0438\u0439",
  "doctype": "DocType",
+ "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
@@ -70,7 +71,7 @@
  "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-12-15 20:54:43.139095",
+ "modified": "2022-12-17 14:34:58.998732",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "TaxCode",
