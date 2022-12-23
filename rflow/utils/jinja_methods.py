@@ -22,14 +22,15 @@ def money_text(money):
     space = r.find(' руб')
     return f'{money} ({r[:space]}){r[space:]}'
 
-def get_address(address):
+def get_address(address, nohythen=True):
     adr = list(frappe.db.get_value(
 			'Address', address, ['pincode', 'city', 'address_line2',
 			'address_line1']))
-    try:
-        adr[2] = adr[2].replace(' ','&nbsp')
-    except:
-        pass
+    if nohythen:
+        try:
+            adr[2] = adr[2].replace(' ','&nbsp')
+        except:
+            pass
     return ', '.join(filter(None, adr))
 
 def short_fio(contact):
