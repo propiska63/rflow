@@ -34,11 +34,24 @@ class RieltFlow(Document):
 				throw(_('Error - Linked address not found'))
 
 		return frappe.get_doc('CheckerBoard', self.address)
+
+	@frappe.whitelist()
+	def need_rename(self):
+		name = self.get_name()
+		if not name in self.name:
+			if frappe.db.exists("RieltFlow", name):
+				name = f'{name} #{getseries(name, 1)}'
+			return name
+		return False
+
 	# Compose unique name
+	def get_name(self):
+		return cstr(f'{self.company} | {self.address}')
 	def autoname(self):
-		self.name = cstr(f'{self.company} | {self.address}')
+		self.name = self.get_name()
 		if frappe.db.exists("RieltFlow", self.name):
-			self.name = cstr(f'{self.name} #{getseries(self.name, 1)}')
+			self.name = f'{self.name} #{getseries(self.name, 1)}'
+		
 	def before_save(self):
 		# Set week of record
 		weekday = getdate(self.date).weekday()
@@ -56,12 +69,14 @@ class RieltFlow(Document):
 
 		if len(self.director.strip().split(' ')) < 3:
 				throw(_('Please enter full director FIO'))
+
 	def before_submit(self):
 		if not frappe.db.exists('CheckerBoard', self.address):
 				throw(_('Error - Linked address not found'))
 		checker = frappe.get_doc('CheckerBoard', self.address)
 		if checker.docstatus == 0:
 			checker._submit()
+
 	def on_update(self):
 		# Set CheckerBoard link for filters
 		if self.address:
@@ -72,7 +87,6 @@ class RieltFlow(Document):
 		else:
 			if old.address != self.address and old.address:
 				frappe.db.set_value('CheckerBoard', old.address, 'rielt_flow', None)
-
 
 	def on_update_after_submit(self):
 		if self.registration_date:
