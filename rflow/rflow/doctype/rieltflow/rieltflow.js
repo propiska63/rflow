@@ -21,6 +21,22 @@ frappe.ui.form.on('RieltFlow', {
 			}
 		})
 	},
+	after_save: function(frm) {
+		frm.call('need_rename').then(r => {
+			if (r.message) {
+				console.log(`Renaming letter from "${frm.doc.name}" to "${r.message}"`)
+				frappe.require('/assets/rflow/js/rename.js', () => {
+					//return new Promise((resolve, reject) => {
+					//rename_document(frm, r.message).then(resolve).catch(reject);
+					//reject
+					rename_document(frm, r.message);
+					//frappe.ui.toolbar.clear_cache()
+
+					//});
+				})
+			}
+		});
+	},
 	address: function(frm) {
 		if (frm.doc.address) {
 			frm.call('get_tax_area', { throw_if_missing: true })
