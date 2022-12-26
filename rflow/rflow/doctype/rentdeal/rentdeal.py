@@ -97,9 +97,11 @@ class RentDeal(Document):
 		if not old:
 			return
 
+		if old.date != self.date and old.address:
+			self.autoname()
 		if old.address != self.address and old.address:
 			frappe.db.set_value('CheckerBoard', old.address, 'rent_deal', None)
-
+			self.autoname()
 		if old.guarantee_letter != self.guarantee_letter and old.guarantee_letter:
 			frappe.db.set_value('RieltFlow', old.guarantee_letter, 'deal_name', None)
 
