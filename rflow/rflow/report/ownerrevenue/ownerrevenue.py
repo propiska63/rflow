@@ -5,7 +5,7 @@ import frappe
 from frappe import _
 
 import locale
-locale.setlocale(locale.LC_ALL, 'ru_RU')
+locale.setlocale(locale.LC_MONETARY, 'ru_RU.utf8')
 #"holiday_date": ["between", (self.start_date, self.end_date)],
 
 def execute(filters=None):
