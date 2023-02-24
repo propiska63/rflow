@@ -18,6 +18,7 @@
   "column_break_3",
   "date",
   "address",
+  "paid_to",
   "section_break_5",
   "price",
   "rent_period",
@@ -53,7 +54,6 @@
    "label": "Deal Information"
   },
   {
-   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date",
@@ -88,7 +88,7 @@
    "in_filter": 1,
    "in_global_search": 1,
    "in_standard_filter": 1,
-   "label": "Company Name",
+   "label": "Company",
    "reqd": 1
   },
   {
@@ -145,11 +145,13 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "bank",
    "fieldtype": "Data",
    "label": "Bank"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "account",
    "fieldtype": "Data",
    "label": "Account"
@@ -159,11 +161,13 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "bik",
    "fieldtype": "Data",
    "label": "BIK"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "cor_account",
    "fieldtype": "Data",
    "label": "Cor Account"
@@ -264,13 +268,22 @@
    "hidden": 1,
    "label": "Deal Name",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "paid_to",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Paid To"
   }
  ],
  "force_re_route_to_default_view": 1,
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-17 14:32:30.642778",
+ "modified": "2023-02-24 15:55:51.952794",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RentDeal",

@@ -1,0 +1,41 @@
+{
+ "based_on": "",
+ "chart_name": "CheckerBoard Taxes",
+ "chart_type": "Group By",
+ "color": "#ECAD4B",
+ "creation": "2023-02-23 14:09:33.183221",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "CheckerBoard",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_based_on": "taxarea",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "last_synced_on": "2023-02-23 14:15:18.379498",
+ "modified": "2023-02-23 14:16:13.141856",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "CheckerBoard Taxes",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
+ "source": "",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Percentage",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

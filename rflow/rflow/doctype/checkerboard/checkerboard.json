@@ -20,12 +20,7 @@
   "office",
   "place",
   "taxarea",
-  "amended_from",
-  "lft",
-  "rgt",
-  "is_group",
-  "old_parent",
-  "parent_checkerboard"
+  "amended_from"
  ],
  "fields": [
   {
@@ -116,45 +111,11 @@
    "label": "Tax Area",
    "options": "TaxArea",
    "read_only": 1
-  },
-  {
-   "fieldname": "lft",
-   "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Left",
-   "no_copy": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "rgt",
-   "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Right",
-   "no_copy": 1,
-   "read_only": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_group",
-   "fieldtype": "Check",
-   "label": "Is Group"
-  },
-  {
-   "fieldname": "old_parent",
-   "fieldtype": "Link",
-   "label": "Old Parent",
-   "options": "CheckerBoard"
-  },
-  {
-   "fieldname": "parent_checkerboard",
-   "fieldtype": "Link",
-   "label": "Parent CheckerBoard",
-   "options": "CheckerBoard"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-25 09:15:14.192081",
+ "modified": "2023-02-23 13:29:49.109455",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CheckerBoard",

@@ -1,19 +1,11 @@
 {
  "charts": [
   {
-   "chart_name": "RieltFlow History",
-   "label": "Orders History"
-  },
-  {
-   "chart_name": "Distribution by Clients",
-   "label": "Distribution by Clients"
-  },
-  {
-   "chart_name": "Distribution by Tax",
-   "label": "Distribution by Tax"
+   "chart_name": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u044f \u043f\u0438\u0441\u0435\u043c",
+   "label": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u044f \u043f\u0438\u0441\u0435\u043c"
   }
  ],
- "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Transferred\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Without Deal\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Orders History\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Tax\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Distribution by Clients\",\"col\":6}}]",
+ "content": "[{\"id\":\"iT6KLik0LU\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"id\":\"AVL3h6kYuW\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Transferred\",\"col\":4}},{\"id\":\"CyFp_YeALD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Without Deal\",\"col\":4}},{\"id\":\"jkGKbZtrQ-\",\"type\":\"chart\",\"data\":{\"chart_name\":\"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u044f \u043f\u0438\u0441\u0435\u043c\",\"col\":12}}]",
  "creation": "2022-11-26 14:13:13.813264",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -23,7 +15,7 @@
  "idx": 0,
  "label": "LETTERS",
  "links": [],
- "modified": "2022-12-08 14:25:23.092137",
+ "modified": "2023-02-24 15:45:41.231598",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "LETTERS",

@@ -33,8 +33,9 @@ class RentDeal(Document):
 		if not frappe.db.exists('RieltFlow', self.guarantee_letter):
 			if throw_if_missing:
 				throw(_('Error - Linked guarantee letter not found'))
-
-		return frappe.get_doc('RieltFlow', self.guarantee_letter)
+		linked_doc = frappe.get_doc('RieltFlow', self.guarantee_letter)
+		paid_to = add_to_date(linked_doc.registration_date, months=linked_doc.period)
+		return linked_doc, paid_to
 
 	@frappe.whitelist()
 	def get_checker(self, throw_if_missing=False):
@@ -78,13 +79,16 @@ class RentDeal(Document):
 		if not frappe.db.exists('CheckerBoard', self.address):
 				throw(_('Error - Linked address not found'))
 		checker = frappe.get_doc('CheckerBoard', self.address)
-		if checker.docstatus == 0:
-			checker._submit()
-		if not frappe.db.exists('RieltFlow', self.guarantee_letter):
-			throw(_('Error - Linked guarantee letter not found'))
-		rflow = frappe.get_doc('RieltFlow', self.guarantee_letter)
-		if rflow.docstatus == 0:
-			rflow._submit()
+		#if checker.docstatus == 0:
+		#	checker._submit()
+		checker._submit() if checker.docstatus == 0 else None
+		if self.guarantee:
+			if not frappe.db.exists('RieltFlow', self.guarantee_letter):
+				throw(_('Error - Linked guarantee letter not found'))
+			rflow = frappe.get_doc('RieltFlow', self.guarantee_letter)
+			#if rflow.docstatus == 0:
+			#	rflow._submit()
+			rflow._submit() if rflow.docstatus == 0 else None
 	
 	def on_update(self):
 		# Set CheckerBoard link for filters

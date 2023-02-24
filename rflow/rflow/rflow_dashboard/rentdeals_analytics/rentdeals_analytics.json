@@ -1,6 +1,27 @@
 {
- "cards": [],
+ "cards": [
+  {
+   "card": "Letters in progress"
+  },
+  {
+   "card": "Draft Deals"
+  },
+  {
+   "card": "Submitted Deals"
+  },
+  {
+   "card": "Canceled Deals"
+  }
+ ],
  "charts": [
+  {
+   "chart": "RentDeals Expiration",
+   "width": "Half"
+  },
+  {
+   "chart": "RentDeals Paid To",
+   "width": "Half"
+  },
   {
    "chart": "RentDeals History",
    "width": "Full"
@@ -11,9 +32,9 @@
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2022-12-06 17:32:29.280021",
+ "modified": "2023-02-23 15:42:28.808126",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RentDeals Analytics",

@@ -1,0 +1,38 @@
+{
+ "based_on": "creation",
+ "chart_name": "CheckerBoard Chart",
+ "chart_type": "Count",
+ "creation": "2023-02-23 13:44:31.984860",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "CheckerBoard",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"CheckerBoard\",\"docstatus\",\"=\",\"1\",false]]",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2023-02-23 13:44:31.984860",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "CheckerBoard Chart",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "parent_document_type": "",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
+ "source": "",
+ "time_interval": "Weekly",
+ "timeseries": 1,
+ "timespan": "Last Quarter",
+ "type": "Line",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

@@ -42,8 +42,7 @@
   "deal_name",
   "column_break_25",
   "exp_date",
-  "amended_from",
-  "workflow"
+  "amended_from"
  ],
  "fields": [
   {
@@ -66,17 +65,16 @@
   {
    "allow_in_quick_entry": 1,
    "bold": 1,
-   "columns": 10,
+   "columns": 7,
    "fieldname": "address",
    "fieldtype": "Link",
    "in_filter": 1,
    "in_global_search": 1,
    "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Address",
    "options": "CheckerBoard",
    "reqd": 1,
-   "width": "100"
+   "width": "200"
   },
   {
    "fieldname": "revenue",
@@ -93,9 +91,7 @@
    "fieldtype": "Data",
    "in_filter": 1,
    "in_global_search": 1,
-   "in_list_view": 1,
    "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Company",
    "reqd": 1
   },
@@ -236,7 +232,6 @@
    "fieldname": "inaccuracy",
    "fieldtype": "Check",
    "in_filter": 1,
-   "in_standard_filter": 1,
    "label": "Inaccuracy in EGRUL"
   },
   {
@@ -287,31 +282,13 @@
    "in_filter": 1,
    "in_global_search": 1,
    "label": "KPP"
-  },
-  {
-   "allow_on_submit": 1,
-   "default": "\u041d\u043e\u0432\u043e\u0435",
-   "fieldname": "workflow",
-   "fieldtype": "Select",
-   "hidden": 1,
-   "in_filter": 1,
-   "in_standard_filter": 1,
-   "label": "Workflow",
-   "options": "\u041d\u043e\u0432\u043e\u0435\n\u041f\u0435\u0440\u0435\u0434\u0430\u043d\u043e\n\u041e\u043f\u043b\u0430\u0447\u0435\u043d\u043e\n\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u043e\n\u041d\u0430 \u0444\u043e\u0440\u043c\u0443\n\u0421\u043d\u044f\u0442\u043e"
   }
  ],
- "force_re_route_to_default_view": 1,
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
- "links": [
-  {
-   "link_doctype": "RentDeal",
-   "link_fieldname": "guarantee_letter",
-   "table_fieldname": "name"
-  }
- ],
+ "links": [],
  "max_attachments": 2,
- "modified": "2022-12-23 14:35:05.514584",
+ "modified": "2023-02-23 12:49:58.904184",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RieltFlow",
