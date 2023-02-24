@@ -15,7 +15,7 @@
  ],
  "charts": [
   {
-   "chart": "\u041e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u0435 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0430\u0440\u0435\u043d\u0434\u044b",
+   "chart": "\u041e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u0435 \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432",
    "width": "Half"
   },
   {
@@ -34,7 +34,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2023-02-24 16:52:57.572763",
+ "modified": "2023-02-24 18:38:28.687153",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "\u0414\u043e\u0433\u043e\u0432\u043e\u0440\u0430 \u0430\u0440\u0435\u043d\u0434\u044b -",
