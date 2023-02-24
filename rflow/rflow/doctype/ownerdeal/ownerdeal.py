@@ -11,6 +11,21 @@ from frappe.model.naming import make_autoname
 from frappe.utils import cstr
 from frappe import _, throw
 
+def russian_month(date):
+    month = {'January': 'Январь',
+            'February': 'Февраль',
+            'March': 'Март',
+            'April': 'Апрель',
+            'May': 'Май',
+            'June': 'Июнь',
+            'July': 'Июль',
+            'August': 'Август',
+            'September': 'Сентябрь',
+            'October': 'октября',
+            'Октябрь': 'Октябрь',
+            'November': 'Ноябрь',
+            'December': 'Декабрь'}
+    return month[date]
 
 class OwnerDeal(Document):
 	def autoname(self):
@@ -28,7 +43,7 @@ class OwnerDeal(Document):
 		# Set exp_date
 		if self.deal_date and self.deal_period:
 			self.exp_date = add_to_date(self.deal_date, months=self.deal_period)
-			self.exp_month = getdate(self.exp_date).strftime("%B %Y")
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
 		else:
 			self.exp_date = ''
 			self.exp_month = ''

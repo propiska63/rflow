@@ -143,6 +143,7 @@
    "label": "Signature"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "tax",
    "fieldtype": "Percent",
    "label": "Tax Ammount"
@@ -152,7 +153,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-12-17 14:36:01.291617",
+ "modified": "2023-02-24 18:28:05.073772",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OurCompany",
