@@ -60,7 +60,7 @@
    "fieldname": "address",
    "fieldtype": "Link",
    "in_filter": 1,
-   "in_list_view": 1,
+   "in_global_search": 1,
    "in_standard_filter": 1,
    "label": "Address",
    "options": "Address",
@@ -76,6 +76,7 @@
    "fieldname": "contact",
    "fieldtype": "Link",
    "in_filter": 1,
+   "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Owner",
@@ -95,7 +96,6 @@
    "fieldname": "in_use",
    "fieldtype": "Check",
    "in_filter": 1,
-   "in_list_view": 1,
    "label": "In use"
   },
   {
@@ -151,7 +151,6 @@
    "fieldname": "exp_month",
    "fieldtype": "Data",
    "in_filter": 1,
-   "in_list_view": 1,
    "label": "Exp Month",
    "read_only": 1
   },
@@ -308,13 +307,8 @@
  "force_re_route_to_default_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [
-  {
-   "link_doctype": "CheckerBoard",
-   "link_fieldname": "address"
-  }
- ],
- "modified": "2022-12-17 14:26:23.672644",
+ "links": [],
+ "modified": "2023-02-23 12:39:01.215063",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OwnerDeal",

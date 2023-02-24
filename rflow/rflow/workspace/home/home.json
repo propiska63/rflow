@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u0413\u0430\u0440\u0430\u043d\u0442\u0438\u0439\u043d\u044b\u0435 \u043f\u0438\u0441\u044c\u043c\u0430</b></span>\",\"col\":6}},{\"type\":\"spacer\",\"data\":{\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Letters\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Transferred\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Without Deal\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"To Form\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u0421\u0434\u0435\u043b\u043a\u0438 \u0430\u0440\u0435\u043d\u0434\u044b</b></span>\",\"col\":6}},{\"type\":\"spacer\",\"data\":{\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drafts\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Normal Rent\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent by Guarantee\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"For Renewal\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Client Documents\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Owner Documents\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Directory\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":3}}]",
+ "content": "[{\"id\":\"LYTeX0__dY\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u0413\u0430\u0440\u0430\u043d\u0442\u0438\u0439\u043d\u044b\u0435 \u043f\u0438\u0441\u044c\u043c\u0430</b></span>\",\"col\":6}},{\"id\":\"8zT-lEeNZm\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"BZrbtEJSOE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Letters\",\"col\":3}},{\"id\":\"XIaTwqRXc4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Transferred\",\"col\":3}},{\"id\":\"Gd3LzAeK88\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Without Deal\",\"col\":3}},{\"id\":\"vW00nENSmi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"To Form\",\"col\":3}},{\"id\":\"_8eSWk8Zjt\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5RBhPI6uGV\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>\u0421\u0434\u0435\u043b\u043a\u0438 \u0430\u0440\u0435\u043d\u0434\u044b</b></span>\",\"col\":6}},{\"id\":\"LR7JNuqwwk\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"wiFLohs5xY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drafts\",\"col\":3}},{\"id\":\"a-e5ahh1O8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Normal Rent\",\"col\":3}},{\"id\":\"5rebEGIHZw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent by Guarantee\",\"col\":3}},{\"id\":\"uG-KXPaW9a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"For Renewal\",\"col\":3}},{\"id\":\"cjBTEhgbp3\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bBEYh84MVr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\" style=\\\"\\\">\u0410\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430</span><b></b>\",\"col\":6}},{\"id\":\"6Iw5bwcwkm\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"d782jY0Z2y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Letters\",\"col\":3}},{\"id\":\"QDzS7gPuRv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RentDeals\",\"col\":3}},{\"id\":\"nDXU6TrUxV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OwnerDeals\",\"col\":3}},{\"id\":\"hj5079Yyp5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CashFlow\",\"col\":3}},{\"id\":\"3cDStHIKMC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TjX34JZwHg\",\"type\":\"card\",\"data\":{\"card_name\":\"Client Documents\",\"col\":3}},{\"id\":\"tLKbvZ2F38\",\"type\":\"card\",\"data\":{\"card_name\":\"Owner Documents\",\"col\":3}},{\"id\":\"YOFMBMJjnZ\",\"type\":\"card\",\"data\":{\"card_name\":\"Directory\",\"col\":3}},{\"id\":\"mgP40Z0Ak0\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup\",\"col\":3}}]",
  "creation": "2022-11-27 18:13:10.340026",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -13,36 +13,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Client Documents",
-   "link_count": 2,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Letters",
-   "link_count": 0,
-   "link_to": "RieltFlow",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Rent Deals",
-   "link_count": 0,
-   "link_to": "RentDeal",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Owner Documents",
-   "link_count": 2,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -68,9 +40,57 @@
   },
   {
    "hidden": 0,
+   "is_query_report": 1,
+   "label": "Owner Report",
+   "link_count": 0,
+   "link_to": "OwnerRevenue",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Our Companies",
+   "link_count": 0,
+   "link_to": "OurCompany",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Offices",
+   "link_count": 0,
+   "link_to": "TaxCode",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Regions",
+   "link_count": 0,
+   "link_to": "TaxArea",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
    "is_query_report": 0,
    "label": "Directory",
-   "link_count": 2,
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -97,17 +117,27 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Setup",
-   "link_count": 2,
+   "label": "Cash Accounts",
+   "link_count": 0,
+   "link_to": "CashAccount",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client Documents",
+   "link_count": 3,
    "onboard": 0,
    "type": "Card Break"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Our Companies",
+   "label": "Letters",
    "link_count": 0,
-   "link_to": "OurCompany",
+   "link_to": "RieltFlow",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -115,15 +145,25 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Tax Offices",
+   "label": "Rent Deals",
    "link_count": 0,
-   "link_to": "TaxCode",
+   "link_to": "RentDeal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CashFlow",
+   "link_count": 0,
+   "link_to": "CashFlow",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2022-12-14 15:37:48.673920",
+ "modified": "2023-02-24 15:37:18.982045",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "HOME",
@@ -131,7 +171,14 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [
   {
@@ -141,6 +188,34 @@
    "link_to": "RieltFlow",
    "stats_filter": "{\"docstatus\":[\"=\",\"0\"]}",
    "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "OwnerDeals",
+   "link_to": "\u0421\u0434\u0435\u043b\u043a\u0438 \u0441 \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0430\u043c\u0438 -",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Letters",
+   "link_to": "\u041f\u043e\u0442\u043e\u043a \u043f\u0438\u0441\u0435\u043c -",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CashFlow",
+   "link_to": "\u0414\u0435\u043d\u0435\u0436\u043d\u044b\u0439 \u043f\u043e\u0442\u043e\u043a -",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "RentDeals",
+   "link_to": "\u0414\u043e\u0433\u043e\u0432\u043e\u0440\u0430 \u0430\u0440\u0435\u043d\u0434\u044b -",
+   "type": "Dashboard"
   },
   {
    "color": "Red",

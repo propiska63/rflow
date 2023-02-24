@@ -1,8 +1,29 @@
 {
- "cards": [],
+ "cards": [
+  {
+   "card": "Square Total"
+  },
+  {
+   "card": "Square Used For Letters"
+  },
+  {
+   "card": "Square Used By Rent"
+  },
+  {
+   "card": "Canceled Square"
+  }
+ ],
  "charts": [
   {
+   "chart": "CheckerBoard Chart",
+   "width": "Half"
+  },
+  {
    "chart": "OwnerDeal History",
+   "width": "Half"
+  },
+  {
+   "chart": "CheckerBoard Taxes",
    "width": "Full"
   }
  ],
@@ -11,9 +32,9 @@
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2022-12-06 17:32:16.584217",
+ "modified": "2023-02-23 15:28:25.574088",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "OwnerDeal Analytics",

@@ -2,6 +2,20 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('RentDeal', {
+	refresh: function(frm) {
+		if (!frm.is_new()) {
+		frm.add_custom_button(__("Payments"), function() {
+			if (frm.is_dirty()) {
+				frappe.confirm(__('Save Rent Deal and go to CashFlow list?'),
+    			() => {
+        		// action to perform if Yes is selected
+				frm.save();
+				frappe.set_route("List", "CashFlow", {"document_type": 'RentDeal',"document": frm.doc.name});
+    			})
+			} else {
+				frappe.set_route("List", "CashFlow", {"document_type": 'RentDeal',"document": frm.doc.name});
+			}})}		
+	},
 	onload: function(frm) {
 		if (frm.doc.guarantee_letter) {
 			frm.doc.guarantee = 1;
@@ -39,7 +53,8 @@ frappe.ui.form.on('RentDeal', {
 			return {
 			filters: {
 			docstatus: 1,
-			deal_name: ''}
+			deal_name: ''
+			}
 			}
 		});
 		frm.set_query('address', () => {
@@ -52,7 +67,7 @@ frappe.ui.form.on('RentDeal', {
 		});
 	},
 	address: function(frm) {
-		if (frm.doc.guarantee == 0 && frm.doc.address) {
+		if (frm.doc.guarantee === 0 && frm.doc.address) {
 			frm.call('get_checker', { throw_if_missing: true })
     			.then(r => {
         			if (r.message) {
@@ -71,34 +86,32 @@ frappe.ui.form.on('RentDeal', {
 		frm.toggle_display(['registration'], guarantee === 0);
 		frm.toggle_enable(['contact','individual','pay_first','address','date'],
 			guarantee === 0);
-
+		frm.set_value({
+			date: null,
+			address: null,
+			paid_to: null,
+			contact: null,
+			guarantee_letter: null,
+			exp_date: null
+		})
 		if (guarantee === 1) {
 			frm.set_df_property('date', 'label', __('Registration Date'))
 			frm.set_value({
 				individual: 0,
 				pay_first: 0,
-				date: '',
-				address: '',
-				contact: '',
-				guarantee_letter: ''
 			})
 		}
 		else {
 			frm.set_df_property('date', 'label', __('Date'))
-			frm.set_value({
-				date: '',
-				address: '',
-				contact: '',
-				guarantee_letter: ''
-			})
 		}
 	},
 	guarantee_letter: function(frm) {
-		if (frm.doc.guarantee_letter) {
+		if (frm.doc.guarantee_letter && frm.doc.guarantee === 1) {
 			frm.call('get_linked_flow', { throw_if_missing: true })
     			.then(r => {
         			if (r.message) {
-            				let linked_doc = r.message;
+            				let linked_doc = r.message[0];
+							let paid_to = r.message[1];
             				// do something with linked_doc
 					frm.set_value({
 						date: linked_doc.registration_date,
@@ -111,7 +124,8 @@ frappe.ui.form.on('RentDeal', {
 						inn: linked_doc.inn,
 						ogrn: linked_doc.ogrn,
 						kpp: linked_doc.kpp,
-						pledge: '0%'
+						pledge: '0%',
+						paid_to: paid_to
 					})
 
         			}

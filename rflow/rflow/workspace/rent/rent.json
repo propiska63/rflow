@@ -1,11 +1,11 @@
 {
  "charts": [
   {
-   "chart_name": "RentDeals History",
-   "label": "RentDeals History"
+   "chart_name": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0430\u0440\u0435\u043d\u0434\u044b",
+   "label": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0430\u0440\u0435\u043d\u0434\u044b"
   }
  ],
- "content": "[{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"For Renewal\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"To Form\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"RentDeals History\",\"col\":12}}]",
+ "content": "[{\"id\":\"XFr6tXvvFo\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Drafts\",\"col\":4}},{\"id\":\"ku8h0eAgxy\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"For Renewal\",\"col\":4}},{\"id\":\"DaEhV1p8k6\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"To Form\",\"col\":4}},{\"id\":\"fNYdQ9MI67\",\"type\":\"chart\",\"data\":{\"chart_name\":\"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0434\u043e\u0433\u043e\u0432\u043e\u0440\u043e\u0432 \u0430\u0440\u0435\u043d\u0434\u044b\",\"col\":12}}]",
  "creation": "2022-11-26 15:49:48.106584",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -15,7 +15,7 @@
  "idx": 0,
  "label": "RENT",
  "links": [],
- "modified": "2022-12-06 16:56:54.763186",
+ "modified": "2023-02-24 13:51:05.489416",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RENT",

@@ -1,0 +1,38 @@
+{
+ "cards": [
+  {
+   "card": "Weekly Letters Income"
+  },
+  {
+   "card": "Monthly Rent Income"
+  },
+  {
+   "card": "Monthly Expences"
+  },
+  {
+   "card": "Weekly Revenue"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "CashFlow Revenue",
+   "width": "Full"
+  },
+  {
+   "chart": "Other Expences",
+   "width": "Full"
+  }
+ ],
+ "creation": "2023-02-23 15:57:04.620918",
+ "dashboard_name": "CashFlow Analytics",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2023-02-23 16:29:20.623599",
+ "modified_by": "Administrator",
+ "module": "Rflow",
+ "name": "CashFlow Analytics",
+ "owner": "Administrator"
+}

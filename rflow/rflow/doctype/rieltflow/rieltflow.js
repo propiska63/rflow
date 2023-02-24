@@ -2,7 +2,32 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('RieltFlow', {
-
+	refresh: function(frm) {
+		if (!frm.is_new()) {
+		frm.add_custom_button(__("Rent Deal"), function() {
+			if (frm.is_dirty()) {
+				frappe.confirm(__('Save Guarantee Letter and go to CashFlow list?'),
+				() => {
+				// action to perform if Yes is selected
+				frm.save();
+				frappe.set_route("List", "RentDeal", {"guarantee_letter": frm.doc.name});
+				})
+			} else {
+				frappe.set_route("List", "RentDeal", {"guarantee_letter": frm.doc.name});
+			}});
+		frm.add_custom_button(__("Payments"), function() {
+			if (frm.is_dirty()) {
+				frappe.confirm(__('Save Guarantee Letter and go to CashFlow list?'),
+    			() => {
+        		// action to perform if Yes is selected
+				frm.save();
+				frappe.set_route("List", "CashFlow", {"document_type": 'RieltFlow',"document": frm.doc.name});
+    			})
+			} else {
+				frappe.set_route("List", "CashFlow", {"document_type": 'RieltFlow',"document": frm.doc.name});
+			}});
+		}		
+	},
 	onload: function(frm) {
 		frm.set_query('address', () => {
 			return {
