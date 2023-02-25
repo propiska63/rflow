@@ -44,6 +44,14 @@ class RieltFlow(Document):
 			return name
 		return False
 
+	def get_exp_date(self):
+		if self.registration_date:
+			self.exp_date = add_to_date(self.registration_date, months=self.period)
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
+		else:
+			self.exp_date = None
+			self.exp_month = None
+
 	# Compose unique name
 	def get_name(self):
 		return cstr(f'{self.company} | {self.address}')
@@ -60,17 +68,13 @@ class RieltFlow(Document):
 		self.week = f'{monday}-{satuday}'
 
 		# Set exp_date
-		if self.registration_date:
-			self.exp_date = add_to_date(self.registration_date, months=self.period)
-			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
-		else:
-			self.exp_date = None
-			self.exp_month = None
+		self.get_exp_date()
 
 		if len(self.director.strip().split(' ')) < 3:
 				throw(_('Please enter full director FIO'))
 
 	def before_submit(self):
+		self.get_exp_date()
 		if not frappe.db.exists('CheckerBoard', self.address):
 				throw(_('Error - Linked address not found'))
 		checker = frappe.get_doc('CheckerBoard', self.address)
@@ -78,12 +82,8 @@ class RieltFlow(Document):
 			checker._submit()
 
 	def on_update(self):
-		if self.registration_date:
-			self.exp_date = add_to_date(self.registration_date, months=self.period)
-			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
-		else:
-			self.exp_date = None
-			self.exp_month = None
+		self.get_exp_date()
+
 		# Set CheckerBoard link for filters
 		if self.address:
 			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', self.name)
@@ -94,13 +94,9 @@ class RieltFlow(Document):
 			if old.address != self.address and old.address:
 				frappe.db.set_value('CheckerBoard', old.address, 'rielt_flow', None)
 
-	def on_update_after_submit(self):
-		if self.registration_date:
-			self.exp_date = add_to_date(self.registration_date, months=self.period)
-			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
-		else:
-			self.exp_date = None
-			self.exp_month = None
+	def before_update_after_submit(self):
+		self.get_exp_date()
+
 
 	def on_trash(self):
 		if self.address and not self.deal_name:
