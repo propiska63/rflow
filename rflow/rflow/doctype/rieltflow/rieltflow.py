@@ -78,6 +78,12 @@ class RieltFlow(Document):
 			checker._submit()
 
 	def on_update(self):
+		if self.registration_date:
+			self.exp_date = add_to_date(self.registration_date, months=self.period)
+			self.exp_month = f'{russian_month(getdate(self.exp_date).strftime("%B"))} {getdate(self.exp_date).strftime("%Y")}'
+		else:
+			self.exp_date = None
+			self.exp_month = None
 		# Set CheckerBoard link for filters
 		if self.address:
 			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', self.name)
