@@ -16,7 +16,7 @@ onload: function(frm) {
             }
         }
     })
-    if (frm.doc.document_type) {
+    if (frm.doc.document_type && !frm.doc.account) {
         frm.call('get_account', { doctype: frm.doc.document_type })
             .then(r => {
                 if (r.message) {
