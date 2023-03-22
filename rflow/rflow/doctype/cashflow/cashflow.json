@@ -111,7 +111,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-03-21 11:56:38.359265",
+ "modified": "2023-03-22 03:12:56.680659",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CashFlow",
@@ -119,6 +119,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
