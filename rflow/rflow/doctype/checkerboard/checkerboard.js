@@ -3,7 +3,7 @@
 
 frappe.ui.form.on('CheckerBoard', {
 	setup: function(frm) {
-		frm.toggle_display(['rielt_flow'], self.rent_deal === '');
+		//frm.toggle_display(['rielt_flow'], frm.rent_deal === null);
 		frm.set_query('address', () => {
 			return {
 			filters: {

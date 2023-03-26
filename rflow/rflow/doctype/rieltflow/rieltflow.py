@@ -58,7 +58,7 @@ class RieltFlow(Document):
 			   "document_type": "RieltFlow", "document": self.name}):
 			frappe.msgprint(
 				msg = _('CashFlow operation already exist'),
-    			title='Important',
+    			title=_('Important'),
     			#raise_exception=ReferenceError
 				)
 			self.cashflow = frappe.db.get_value("CashFlow",{"document_type": "RieltFlow", "document": self.name},"name")
