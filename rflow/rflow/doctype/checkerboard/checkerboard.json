@@ -11,15 +11,17 @@
  "field_order": [
   "address",
   "column_break_2",
-  "rielt_flow",
-  "rent_deal",
+  "taxarea",
   "section_break_4",
   "square",
   "price",
   "column_break_4",
   "office",
   "place",
-  "taxarea",
+  "section_break_xbog",
+  "rielt_flow",
+  "tab_break_u19d",
+  "rent_deal",
   "amended_from"
  ],
  "fields": [
@@ -105,17 +107,24 @@
   {
    "fieldname": "taxarea",
    "fieldtype": "Link",
-   "hidden": 1,
    "in_filter": 1,
    "in_standard_filter": 1,
    "label": "Tax Area",
    "options": "TaxArea",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_xbog",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tab_break_u19d",
+   "fieldtype": "Tab Break"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-23 13:29:49.109455",
+ "modified": "2023-03-26 11:29:22.630107",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "CheckerBoard",
