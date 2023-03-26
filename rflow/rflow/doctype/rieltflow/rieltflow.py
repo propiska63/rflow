@@ -5,6 +5,7 @@ import frappe
 from frappe.utils import cstr
 from frappe.model.document import Document
 from frappe.model.naming import getseries
+from frappe.utils import today
 from frappe.utils import getdate
 from frappe.utils import add_to_date
 from frappe import _, throw
@@ -25,8 +26,8 @@ def russian_month(date):
             'December': 'Декабрь'}
     return month[date]
 
-class RieltFlow(Document):
 
+class RieltFlow(Document):
 	@frappe.whitelist()
 	def get_tax_area(self, throw_if_missing=False):
 		if not frappe.db.exists('CheckerBoard', self.address):
@@ -52,6 +53,32 @@ class RieltFlow(Document):
 			self.exp_date = None
 			self.exp_month = None
 
+	def save_cash(self):
+		if frappe.db.exists({"doctype": "CashFlow", 
+			   "document_type": "RieltFlow", "document": self.name}):
+			frappe.msgprint(
+				msg = _('CashFlow operation already exist'),
+    			title='Important',
+    			#raise_exception=ReferenceError
+				)
+			self.cashflow = frappe.db.get_value("CashFlow",{"document_type": "RieltFlow", "document": self.name},"name")
+		else:
+			# create a new document
+			doc = frappe.new_doc('CashFlow')
+			account = doc.get_account("RieltFlow")
+			if not account:
+				throw(_('Error setting account for new CashFlow record'))
+			else:
+				doc.account = account
+				doc.document_type = 'RieltFlow'
+				doc.document = self.name
+				doc.date = today()
+				doc.rate = self.revenue
+				doc.description = "Автоматически созданная запись приема оплаты за гарантийное письмо."
+				doc.insert()
+				doc._submit()
+				self.cashflow = doc.name
+
 	# Compose unique name
 	def get_name(self):
 		return cstr(f'{self.company} | {self.address}')
@@ -73,6 +100,10 @@ class RieltFlow(Document):
 		if len(self.director.strip().split(' ')) < 3:
 				throw(_('Please enter full director FIO'))
 
+		if self.address and frappe.db.exists('CheckerBoard', self.address):
+			if frappe.db.get_value('CheckerBoard', self.address, 'rielt_flow'):
+				frappe.throw(_('Address already used'))
+
 	def before_submit(self):
 		self.get_exp_date()
 		if not frappe.db.exists('CheckerBoard', self.address):
@@ -80,6 +111,8 @@ class RieltFlow(Document):
 		checker = frappe.get_doc('CheckerBoard', self.address)
 		if checker.docstatus == 0:
 			checker._submit()
+		
+		self.save_cash()
 
 	def on_update(self):
 		self.get_exp_date()
@@ -87,6 +120,7 @@ class RieltFlow(Document):
 		# Set CheckerBoard link for filters
 		if self.address:
 			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', self.name)
+
 		old = self.get_doc_before_save()
 		if not old:
 			return
@@ -97,7 +131,12 @@ class RieltFlow(Document):
 	def before_update_after_submit(self):
 		self.get_exp_date()
 
-
 	def on_trash(self):
 		if self.address and not self.deal_name:
 			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', None)
+
+	def on_cancel(self):
+		if self.address and not self.deal_name:
+			frappe.db.set_value('CheckerBoard', self.address, 'rielt_flow', None)
+
+

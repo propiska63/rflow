@@ -39,9 +39,10 @@
   "update_from_egrul",
   "section_break_21",
   "exp_month",
-  "deal_name",
+  "cashflow",
   "column_break_25",
   "exp_date",
+  "deal_name",
   "amended_from"
  ],
  "fields": [
@@ -72,6 +73,7 @@
    "in_global_search": 1,
    "in_preview": 1,
    "label": "Address",
+   "no_copy": 1,
    "options": "CheckerBoard",
    "reqd": 1,
    "width": "200"
@@ -179,6 +181,7 @@
    "fieldname": "deal_name",
    "fieldtype": "Data",
    "label": "Deal Name",
+   "no_copy": 1,
    "read_only": 1
   },
   {
@@ -282,13 +285,21 @@
    "in_filter": 1,
    "in_global_search": 1,
    "label": "KPP"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "cashflow",
+   "fieldtype": "Data",
+   "label": "CashFlow",
+   "no_copy": 1,
+   "read_only": 1
   }
  ],
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
  "max_attachments": 2,
- "modified": "2023-02-25 13:17:56.955105",
+ "modified": "2023-03-26 08:45:38.929334",
  "modified_by": "Administrator",
  "module": "Rflow",
  "name": "RieltFlow",
